@@ -8,7 +8,7 @@ function createWindow() {
 	win = new BrowserWindow({
 		width: 850 ,
 		minWidth: 850,
-		height: 580,
+		height: 440,
 		//frame: false,
 		center: true,
 		autoHideMenuBar: true,
