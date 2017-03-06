@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p",
+    "w": "webpack -w",
+    "b": "webpack -p",
     "asar": "asar pack . dist/app.asar",
     "e": "electron ."
   },
@@ -16,6 +17,7 @@
     "asar": "^0.13.0",
     "css-loader": "^0.26.2",
     "electron-titlebar-windows": "^2.1.0",
+    "lodash": "^4.17.4",
     "ssh2": "^0.5.4",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",

@@ -1,13 +1,30 @@
+//css
 require("./render.css");
 require("./node_modules/xterm/dist/xterm.css");
+//library.
 let angular = require("angular");
 let Terminal = require("xterm");
+let electron = require("electron");
 let ssh2 = require("ssh2");
+
 let Client = ssh2.Client;
+let Menu = electron.remote.Menu;
+
+angular.module('BlankApp', [])
+
+.controller('mainController', ['$scope', function($scope) {
+	$scope.show1 = 'hello';
+}]);
 
 
-angular.module('BlankApp', []);
 
+
+
+
+
+
+
+/*
 let term = new Terminal();
 term.open(document.getElementById("#terminal"));
 
@@ -52,3 +69,5 @@ conn.connect({
 	username: 'sunday',
 	password: '123'
 });
+
+*/
