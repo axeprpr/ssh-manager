@@ -1,13 +1,14 @@
-html, body {
-	height: 100%;
+html,
+body {
+    height: 100%;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 div.root {
-	flex-grow: 1;
+    flex-grow: 1;
 }
