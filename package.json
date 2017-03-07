@@ -1,32 +1,32 @@
 {
-  "name": "shell-manager",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "w": "webpack -w",
-    "b": "webpack -p",
-    "asar": "asar pack . dist/app.asar",
-    "e": "electron ."
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "angular": "^1.6.2",
-    "asar": "^0.13.0",
-    "css-loader": "^0.26.2",
-    "electron-titlebar-windows": "^2.1.0",
-    "lodash": "^4.17.4",
-    "ssh2": "^0.5.4",
-    "style-loader": "^0.13.2",
-    "webpack": "^2.2.1",
-    "xterm": "^2.3.2"
-  },
-  "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-es2015": "^6.22.0"
-  }
+    "name": "shell-manager",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "w": "webpack -w",
+        "build": "webpack -p",
+        "asar": "node build_app.js",
+        "e": "electron ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "angular": "^1.6.2",
+        "asar": "^0.13.0",
+        "css-loader": "^0.26.2",
+        "electron-titlebar-windows": "^2.1.0",
+        "lodash": "^4.17.4",
+        "ssh2": "^0.5.4",
+        "style-loader": "^0.13.2",
+        "webpack": "^2.2.1",
+        "xterm": "^2.3.2"
+    },
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-core": "^6.23.1",
+        "babel-loader": "^6.3.2",
+        "babel-preset-es2015": "^6.22.0"
+    }
 }
