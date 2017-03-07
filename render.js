@@ -8,7 +8,6 @@ let electron = require("electron");
 let ssh2 = require("ssh2");
 
 let Client = ssh2.Client;
-let Menu = electron.remote.Menu;
 
 angular.module('BlankApp', [])
 
@@ -24,7 +23,6 @@ angular.module('BlankApp', [])
 
 
 
-/*
 let term = new Terminal();
 term.open(document.getElementById("#terminal"));
 
@@ -64,10 +62,9 @@ conn.on('ready', () => {
 });
 
 conn.connect({
-	host: '192.168.8.219',
+	host: '192.168.0.1',
 	port: 22,
-	username: 'sunday',
-	password: '123'
+	username: 'root',
+	password: 'admin'
 });
 
-*/
