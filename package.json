@@ -21,7 +21,7 @@
         "ssh2": "^0.5.4",
         "style-loader": "^0.13.2",
         "webpack": "^2.2.1",
-        "xterm": "^2.3.2"
+        "xterm": "^2.4.0"
     },
     "devDependencies": {
         "babel": "^6.23.0",

@@ -22,10 +22,16 @@ angular.module('BlankApp', [])
 
 
 
-
+Terminal.loadAddon('fit');
 let term = new Terminal();
-term.open(document.getElementById("#terminal"));
+term.open(document.getElementById("#terminal1"));
+term.fit();
+console.log(term.element);
 
+// let term2 = new Terminal();
+// term2.open(document.getElementById("#terminal2"));
+// term2.fit();
+// console.log(term2.element);
 
 let conn = new Client();
 let ssh_stream = null;

@@ -10,5 +10,25 @@ body {
 }
 
 div.root {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+}
+
+div.console {
+    flex-grow: 1;
+}
+
+div.tab_bar ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+div.tab_bar ul li {
+    margin: 0 5px 0 5px;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
 }
