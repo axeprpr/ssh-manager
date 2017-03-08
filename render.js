@@ -4,9 +4,10 @@ require("./node_modules/xterm/dist/xterm.css");
 //library.
 let angular = require("angular");
 let Terminal = require("xterm");
+Terminal.loadAddon('fit');
+
 let electron = require("electron");
 let ssh2 = require("ssh2");
-
 let Client = ssh2.Client;
 
 angular.module('BlankApp', [])
@@ -16,36 +17,33 @@ angular.module('BlankApp', [])
 }]);
 
 
-
-
-
-
-
-
-Terminal.loadAddon('fit');
 let term = new Terminal();
 term.open(document.getElementById("#terminal1"));
+term.writeln('Zshell Build 2017.03.08');
+term.writeln('Copyright (c) 2016-∞ sun@chengcheng. All rights reserved.');
+term.writeln("");
+term.writeln("Type `help' to learn how to use Zshell prompt.");
+term.write("[~]$ ");
 term.fit();
-console.log(term.element);
-
-// let term2 = new Terminal();
-// term2.open(document.getElementById("#terminal2"));
-// term2.fit();
-// console.log(term2.element);
 
 let conn = new Client();
 let ssh_stream = null;
+let ssh_ping_timer = null;
 
 term.on('key', (key, e) => {
     ssh_stream.write(key);
-});
-term.on('open', () => {
-    term.fit();
 });
 
 conn.on('ready', () => {
     console.log('Client :: ready');
     conn.shell((err, stream) => {
+        ssh_ping_timer = setInterval(() => {
+            if (!!!ssh_stream) {
+                clearInterval(ssh_ping_timer);
+            }
+            console.log('ssh ping.');
+            ssh_stream._client._sshstream.ping();
+        }, 60 * 1000);
         if (err) {
             throw err;
         }
@@ -73,3 +71,4 @@ conn.connect({
     username: 'coder',
     password: 'Stop2MkLove@night'
 });
+console.log('prepare connect to remote host.');
